@@ -32,7 +32,7 @@
  * @return { increment: Function, decrement: Function, reset: Function }
  */
 const createCounter = function (init) {
-  let resetValue = init;
+  let value = init;
   return {
     increment: function () {
       init++;
@@ -43,7 +43,7 @@ const createCounter = function (init) {
       return init;
     },
     reset: function () {
-      init = resetValue;
+      init = value;
       return init;
     },
   };
